@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Should the loan be approved or denied?</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Defaulter Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="Term" placeholder="Term of loan"><br>
+                <input class="form-input" type="text" name="Date_Diff" placeholder="Days b/w disbursement and approval date"><br>
+                <input class="form-input" type="text" name="State_encode" placeholder="State_encode"><br>
+                <input class="form-input" type="text" name="GrAppv" placeholder="GrAppv"><br>
+                <input class="form-input" type="text" name="SBA_Appv" placeholder="SBA_Appv"><br>
+                <input class="form-input" type="text" name="NoEmp" placeholder="NoEmp"><br>
+                <input class="form-input" type="text" name="RetainedJob" placeholder="RetainedJob"><br>
+                <input class="form-input" type="text" name="CreateJob" placeholder="CreateJob"><br>
+                <input class="form-input" type="text" name="RevLineCr_Y" placeholder="0:Rev_line_no, 1:Rev_line_yes"><br>
+
+
+
+
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+
+           </div>
+           <p class='footer-description'>Made by Capstone Group 6.</p>
+       </div>
+
+    </body>
+</html>
